@@ -90,10 +90,10 @@ def driver(request):
 # =========================
 # LOGIN FIXTURE
 # =========================
-@pytest.fixture
-def login_in_driver(driver):
-    login(driver)
-    return driver
+#@pytest.fixture
+#def login_in_driver(driver):
+#    login(driver)
+#    return driver
 
 
 # =========================
