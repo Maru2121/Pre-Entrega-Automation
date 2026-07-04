@@ -11,8 +11,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
-from utils.LoginPage import login
+# CORREGIDO: Se eliminó el import viejo de utils.LoginPage
 from utils.excel_reporter import add_result, generate_excel_report
+from pages.login_page import LoginPage  # Centralizado arriba para mantener orden
 
 
 # =========================
@@ -31,7 +32,6 @@ def pytest_addoption(parser):
 # CONFIG REPORTS
 # =========================
 def pytest_configure(config):
-
     os.makedirs("reports", exist_ok=True)
     os.makedirs("screenshots", exist_ok=True)
 
@@ -46,7 +46,6 @@ def pytest_configure(config):
 # =========================
 @pytest.fixture
 def driver(request):
-
     browser = request.config.getoption("--browser")
 
     if browser == "chrome":
@@ -90,10 +89,11 @@ def driver(request):
 # =========================
 # LOGIN FIXTURE
 # =========================
-#@pytest.fixture
-#def login_in_driver(driver):
-#    login(driver)
-#    return driver
+@pytest.fixture
+def login_in_driver(driver):
+    login_page = LoginPage(driver)
+    login_page.login("standard_user", "secret_sauce")
+    return driver
 
 
 # =========================
@@ -101,7 +101,6 @@ def driver(request):
 # =========================
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item):
-
     outcome = yield
     rep = outcome.get_result()
 
@@ -114,13 +113,11 @@ def pytest_runtest_makereport(item):
     driver = item.funcargs.get("driver")
 
     if rep.failed:
-
         add_result(tc_id, False, error=str(rep.longrepr))
 
         if driver:
             screenshot = f"screenshots/{item.name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
             driver.save_screenshot(screenshot)
-
     else:
         add_result(tc_id, True)
 

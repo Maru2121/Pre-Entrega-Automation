@@ -1,0 +1,8 @@
+pytest
+pytest-html
+selenium
+requests
+faker
+pandas
+openpyxl
+webdriver-manager

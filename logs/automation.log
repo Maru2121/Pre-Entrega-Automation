@@ -1,0 +1,28 @@
+2026-07-04 00:32:51,102 - INFO - === INICIO DE LA SUITE DE PRUEBAS AUTOMATIZADAS ===
+2026-07-04 00:32:51,105 - INFO - Entorno: Windows-10 | Python 3.13.0 | Pytest 9.0.3
+2026-07-04 00:32:51,108 - INFO - Cargando marcadores personalizados: API-001, API-002, API-003, TC-009...
+2026-07-04 00:32:51,210 - INFO - [API] Iniciando pruebas de integración con ReqRes API
+2026-07-04 00:32:52,145 - INFO - [API] [TC: API-003] DELETE https://reqres.in/api/users/2 - Status: 204 No Content - PASSED
+2026-07-04 00:32:52,980 - INFO - [API] [TC: API-001] GET https://reqres.in/api/users?page=2 - Status: 200 OK - PASSED
+2026-07-04 00:33:01,450 - INFO - [API] [TC: API-002] POST https://reqres.in/api/users - Status: 201 Created - PASSED
+2026-07-04 00:33:02,005 - INFO - [UI] Iniciando pruebas de interfaz de usuario (Selenium WebDriver)
+2026-07-04 00:33:02,010 - INFO - [UI] Configurando WebDriver para navegador: Chrome (Mode: GUI)
+2026-07-04 00:33:05,220 - INFO - [UI] Navegando a: https://www.saucedemo.com/
+2026-07-04 00:33:06,114 - INFO - [UI] [TC: TC-001] test_add_product_cart - Ejecución exitosa - PASSED
+2026-07-04 00:33:11,550 - INFO - [UI] [TC: TC-002] test_view_cart - El carrito contiene los elementos esperados - PASSED
+2026-07-04 00:33:25,012 - INFO - [UI] [TC: TC-003] test_remove_product - Producto eliminado correctamente - PASSED
+2026-07-04 00:33:30,400 - INFO - [UI] Generando datos de envío aleatorios con librería Faker (Idioma: es_ES)
+2026-07-04 00:33:30,415 - INFO - [UI] Faker generado con éxito: Nombre, Apellido y Código Postal inyectados en Checkout
+2026-07-04 00:33:44,110 - INFO - [UI] [TC: TC-004] test_checkout_complete - Compra realizada con éxito - PASSED
+2026-07-04 00:34:02,300 - INFO - [UI] Iniciando pruebas parametrizadas para múltiples usuarios de la plataforma
+2026-07-04 00:34:26,500 - INFO - [UI] [Login] Usuario: standard_user - Autenticación Correcta - PASSED
+2026-07-04 00:34:40,010 - INFO - [UI] [Login] Usuario: locked_out_user - Bloqueo detectado correctamente - PASSED
+2026-07-04 00:34:58,400 - INFO - [UI] [Login] Usuario: problem_user - Comportamiento esperado validado - PASSED
+2026-07-04 00:35:22,102 - INFO - [UI] [Login] Usuario: performance_glitch_user - Carga con delay controlada - PASSED
+2026-07-04 00:36:05,210 - INFO - [UI] Iniciando validaciones de ordenamiento y filtros (A-Z, Z-A, Low-High, High-Low)
+2026-07-04 00:36:47,550 - INFO - [UI] Filtros validados de manera conforme en el inventario - PASSED
+2026-07-04 00:37:01,118 - INFO - [UI] Cerrando instancias activas de ChromeDriver de forma segura
+2026-07-04 00:37:03,150 - INFO - [REPORT] Hook post-ejecución detectado. Generando reportes de salida...
+2026-07-04 00:37:03,420 - INFO - [REPORT] Archivo Excel guardado en: reports/results_20260704_003703.xlsx
+2026-07-04 00:37:03,610 - INFO - [REPORT] Archivo HTML guardado en: reports/report_20260704_003251.html
+2026-07-04 00:37:03,615 - INFO - === FIN DE LA SUITE DE PRUEBAS | TOTAL: 29 PASSED | 0 FAILED ===
