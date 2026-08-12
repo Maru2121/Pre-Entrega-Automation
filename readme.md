@@ -123,7 +123,7 @@ La última ejecución global arrojó un resultado de **`29 passed in 256.54s`**,
 
 ### 1. Clonar el repositorio
 ```bash
-git clone [https://github.com/Maru2121/Entrega-Final-Automation.git](https://github.com/Maru2121/Entrega-Final-Automation.git)
+git clone [https://github.com/mariachiribao/Entrega-Final-Automation.git](https://github.com/mariachiribao/Entrega-Final-Automation.git)
 cd Entrega-Final-Automation
 ```
 
