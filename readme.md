@@ -483,7 +483,7 @@ Las pruebas incluyen manejo controlado de excepciones y validación de códigos 
 
 ---
 
-# 📮 Postman
+# Postman
 
 También se desarrollaron validaciones mediante Postman para complementar las pruebas automatizadas de API.
 
@@ -842,7 +842,7 @@ Este proyecto permitió consolidar conocimientos en:
 
 ---
 
-# 🤖 AI-Assisted QA Automation
+# AI-Assisted QA Automation
 
 Este proyecto representa además una experiencia práctica en la integración de **Inteligencia Artificial dentro de un proceso profesional de QA Automation**.
 
